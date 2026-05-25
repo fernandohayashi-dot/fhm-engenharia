@@ -24,3 +24,17 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ========================= */
+/* CARDS DOS CASES */
+/* ========================= */
+
+.case-card {
+  transition: all 0.3s ease;
+}
+
+.case-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 168, 232, 0.15);
+  border-color: rgba(0, 168, 232, 0.5);
+}

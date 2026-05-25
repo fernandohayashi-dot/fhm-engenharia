@@ -53,43 +53,54 @@ export const cases: CaseData[] = [
       "Documentação executiva"
     ],
 
-    gallery: []
+    gallery: [
+  "/eltscm.png",
+  "/elt2scm.png",
+  "/sntscm.png"
+]
   },
   {
   slug: "residencia-alto-padrao",
 
   title: "Residência Alto Padrão",
 
-  location: "São Paulo/SP",
+  location: "Indaiatuba/SP",
 
   coverImage: "/projeto1.png",
 
-  category: "Residencial",
+  category: "Residencial Alto Padrão",
 
-  area: "850 m²",
+  area: "350 m²",
 
   phase: "Projeto Executivo",
 
   software: "QiBuilder",
 
   headline:
-    "Projetos hidrossanitários e compatibilização BIM.",
+    "Projetos complementares desenvolvidos em ambiente BIM para garantir integração entre disciplinas, organização executiva e previsibilidade durante a construção.",
 
   challenge:
-    "Coordenação entre arquitetura e instalações.",
+    "A residência apresentava elevado nível de detalhamento arquitetônico, múltiplos ambientes molhados, áreas de lazer e infraestrutura para equipamentos especiais. O principal desafio consistiu na coordenação entre sistemas elétricos, hidrossanitários e elementos arquitetônicos, garantindo compatibilidade técnica sem interferir na proposta estética do projeto.",
 
   solution:
-    "Modelagem BIM integrada.",
+    "Os projetos foram desenvolvidos integralmente em ambiente BIM, permitindo a modelagem coordenada das instalações, verificação antecipada de interferências e organização dos espaços técnicos. A compatibilização entre disciplinas possibilitou soluções mais eficientes para passagem de redes, posicionamento de equipamentos e definição da documentação executiva.",
 
   result:
-    "Maior previsibilidade de execução.",
+    "A integração entre os projetos proporcionou maior previsibilidade durante a execução da obra, redução de ajustes em campo e documentação técnica organizada para apoio às equipes executoras. O processo contribuiu para uma construção mais eficiente, com melhor controle das instalações e menor ocorrência de interferências entre disciplinas.",
 
   activities: [
+    "Projeto elétrico",
     "Projeto hidrossanitário",
-    "Compatibilização BIM"
+    "Compatibilização BIM",
+    "Modelagem 3D",
+    "Documentação executiva"
   ],
 
-  gallery: []
+  gallery: [
+    "/residencialelt.png",
+    "/residenciasnt.png",
+    "/residenciahid.png"
+  ]
 },
 
 {
@@ -103,29 +114,36 @@ export const cases: CaseData[] = [
 
   category: "Comercial",
 
-  area: "2.500 m²",
+  area: "540,24 m²",
 
   phase: "Projeto Executivo",
 
   software: "QiBuilder",
 
   headline:
-    "Projetos elétricos e coordenação multidisciplinar.",
+    "Projetos complementares desenvolvidos em ambiente BIM para garantir integração entre disciplinas, organização executiva e maior previsibilidade durante a implantação da edificação.",
 
   challenge:
-    "Grande extensão de instalações.",
+    "O empreendimento comercial apresentava grandes vãos estruturais, múltiplos pontos de atendimento e extensa infraestrutura de instalações elétricas e hidrossanitárias. O principal desafio consistiu na coordenação das redes técnicas, definição dos trajetos de distribuição e compatibilização entre sistemas para garantir funcionalidade, organização executiva e facilidade de manutenção futura.",
 
   solution:
-    "Desenvolvimento integrado em BIM.",
+    "Os projetos foram desenvolvidos integralmente em ambiente BIM, permitindo a modelagem coordenada das instalações, análise preventiva de interferências e organização estratégica das redes elétricas e hidrossanitárias. A compatibilização entre disciplinas proporcionou melhor aproveitamento dos espaços técnicos e documentação executiva mais clara para a fase de obra.",
 
   result:
-    "Redução de interferências.",
+    "A integração dos projetos permitiu maior previsibilidade durante a execução, redução de ajustes em campo e melhor coordenação entre as equipes envolvidas. O processo contribuiu para uma implantação mais eficiente das instalações, com documentação compatibilizada e maior confiabilidade das informações executivas.",
 
   activities: [
     "Projeto elétrico",
-    "Compatibilização BIM"
+    "Projeto hidrossanitário",
+    "Compatibilização BIM",
+    "Modelagem 3D",
+    "Documentação executiva"
   ],
 
-  gallery: []
+  gallery: [
+    "/galpao-eletrico.png",
+    "/galpao-hidro.png",
+    "/galpao-sanit.png"
+  ]
 }
 ];

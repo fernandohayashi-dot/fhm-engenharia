@@ -12,82 +12,88 @@ export default function CasesPage() {
     >
       {/* HEADER */}
 
-      <header
-        style={{
-          borderBottom: "1px solid rgba(255,255,255,0.08)",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "22px 40px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <Link
-            href="/"
-            style={{
-              color: "#F5F6F7",
-              textDecoration: "none",
-              fontWeight: 700,
-              fontSize: "28px",
-            }}
-          >
-            FHM Engenharia
-          </Link>
+<header
+  style={{
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "24px 80px",
+    borderBottom: "1px solid rgba(255,255,255,0.08)",
+    position: "sticky",
+    top: 0,
+    background: "rgba(13,17,22,0.95)",
+    backdropFilter: "blur(10px)",
+    zIndex: 100,
+  }}
+>
+  {/* LOGO */}
 
-          <nav
-            style={{
-              display: "flex",
-              gap: "32px",
-            }}
-          >
-            <Link
-              href="/"
-              style={{
-                color: "#F5F6F7",
-                textDecoration: "none",
-              }}
-            >
-              Home
-            </Link>
+  <Link href="/">
+    <img
+      src="/logo.png"
+      alt="FHM Engenharia"
+      style={{
+        height: "65px",
+        display: "block",
+        cursor: "pointer",
+      }}
+    />
+  </Link>
 
-            <Link
-              href="/#servicos"
-              style={{
-                color: "#F5F6F7",
-                textDecoration: "none",
-              }}
-            >
-              Serviços
-            </Link>
+  {/* MENU */}
 
-            <Link
-              href="/cases"
-              style={{
-                color: "#00A8E8",
-                textDecoration: "none",
-                fontWeight: 600,
-              }}
-            >
-              Portfólio
-            </Link>
+  <nav
+  style={{
+    display: "flex",
+    gap: "32px",
+    fontSize: "17px",
+    fontWeight: 500,
+  }}
+>
+  <Link
+    href="/"
+    style={{
+      color: "#F5F6F7",
+      textDecoration: "none",
+    }}
+  >
+    Home
+  </Link>
 
-            <Link
-              href="/#contato"
-              style={{
-                color: "#F5F6F7",
-                textDecoration: "none",
-              }}
-            >
-              Contato
-            </Link>
-          </nav>
-        </div>
-      </header>
+  <Link
+    href="/servicos"
+    style={{
+      color: "#F5F6F7",
+      textDecoration: "none",
+    }}
+  >
+    Serviços
+  </Link>
+
+  <Link
+    href="/cases"
+    style={{
+      color: "#00A8E8",
+      textDecoration: "none",
+      fontWeight: 700,
+    }}
+  >
+    Portfólio
+  </Link>
+
+  <a
+    href="https://wa.me/5514998872510"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      color: "#F5F6F7",
+      textDecoration: "none",
+    }}
+  >
+    Contato
+  </a>
+</nav>
+</header>
 
       {/* HERO */}
 
@@ -274,61 +280,83 @@ export default function CasesPage() {
 
       {/* CTA FINAL */}
 
-      <section
-        style={{
-          marginTop: "40px",
-          padding: "100px 40px",
-          background: "#111821",
-          borderTop: "1px solid rgba(255,255,255,0.08)",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "900px",
-            margin: "0 auto",
-            textAlign: "center",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "52px",
-              marginBottom: "24px",
-            }}
-          >
-            Precisa de projetos elétricos, hidrossanitários ou compatibilização BIM?
-          </h2>
+<section
+  style={{
+    maxWidth: "1400px",
+    margin: "0 auto",
+    padding: "0 40px 120px",
+  }}
+>
+  <div
+    style={{
+      background:
+        "linear-gradient(135deg,#0D1726 0%, #17263D 100%)",
+      border: "1px solid rgba(255,255,255,0.08)",
+      borderRadius: "32px",
+      padding: "100px 80px",
+      textAlign: "center",
+      position: "relative",
+      overflow: "hidden",
+    }}
+  >
+    <div
+      style={{
+        color: "#00A8E8",
+        fontSize: "14px",
+        fontWeight: 700,
+        letterSpacing: "2px",
+        textTransform: "uppercase",
+        marginBottom: "20px",
+      }}
+    >
+      Solicite uma proposta
+    </div>
 
-          <p
-            style={{
-              color: "#B8C2D0",
-              fontSize: "18px",
-              lineHeight: "1.8",
-              marginBottom: "40px",
-            }}
-          >
-            Desenvolvemos projetos elétricos,
-            hidrossanitários e compatibilização BIM para
-            arquitetos, construtoras e incorporadoras.
-          </p>
+    <h2
+      style={{
+        fontSize: "72px",
+        lineHeight: "1.1",
+        maxWidth: "950px",
+        margin: "0 auto 24px",
+      }}
+    >
+      Precisa de projetos elétricos, hidrossanitários ou compatibilização BIM?
+    </h2>
 
-          <a
-            href="https://wa.me/5516999999999"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-block",
-              background: "#00A8E8",
-              color: "#FFFFFF",
-              padding: "18px 36px",
-              borderRadius: "14px",
-              textDecoration: "none",
-              fontWeight: 600,
-            }}
-          >
-            Solicitar orçamento
-          </a>
-        </div>
-      </section>
+    <p
+      style={{
+        color: "#A8B3C7",
+        maxWidth: "850px",
+        margin: "0 auto 40px",
+        lineHeight: "1.9",
+        fontSize: "20px",
+      }}
+    >
+      Desenvolvemos projetos elétricos, hidrossanitários e
+      compatibilização BIM para arquitetos, construtoras e
+      incorporadoras que buscam maior previsibilidade,
+      redução de interferências e documentação executiva organizada.
+    </p>
+
+    <a
+      href="https://wa.me/5519983577250"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: "inline-block",
+        background: "#00A8E8",
+        color: "#FFFFFF",
+        padding: "18px 40px",
+        borderRadius: "14px",
+        textDecoration: "none",
+        fontWeight: 600,
+        fontSize: "18px",
+      }}
+    >
+      Solicitar orçamento
+    </a>
+  </div>
+</section>
     </main>
   );
 }

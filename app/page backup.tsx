@@ -175,7 +175,7 @@ export default function Home() {
   }}
 >
   <a
-    href="https://wa.me/5516999999999"
+    href="https://wa.me/5519983577250"
     style={{
       background: "#00A8E8",
       color: "#FFFFFF",
@@ -351,20 +351,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROJETOS */}
+      {/* CASES SELECIONADOS */}
 
 <section
-  id="projetos"
   style={{
     maxWidth: "1200px",
-    margin: "0 auto 120px",
-    padding: "0 40px",
+    margin: "0 auto",
+    padding: "120px 40px",
   }}
 >
   <h2
     style={{
-      fontSize: "52px",
-      marginBottom: "40px",
+      fontSize: "64px",
+      marginBottom: "60px",
     }}
   >
     Cases Selecionados
@@ -379,108 +378,26 @@ export default function Home() {
   >
     {/* RESIDÊNCIA */}
 
-    <div
-      style={{
-        background: "#111821",
-        border: "1px solid rgba(255,255,255,0.08)",
-        borderRadius: "20px",
-        overflow: "hidden",
-      }}
-    >
-      <img
-        src="/projeto1.png"
-        alt="Residência Alto Padrão"
-        style={{
-          width: "100%",
-          height: "240px",
-          objectFit: "cover",
-        }}
-      />
-
-      <div
-        style={{
-          padding: "24px",
-          minHeight: "220px",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <div
-          style={{
-            color: "#00A8E8",
-            fontSize: "12px",
-            letterSpacing: "1px",
-            textTransform: "uppercase",
-            marginBottom: "10px",
-            fontWeight: 600,
-          }}
-        >
-          Residencial
-        </div>
-
-        <h3
-          style={{
-            marginBottom: "10px",
-          }}
-        >
-          Residência Alto Padrão
-        </h3>
-
-        <div
-          style={{
-            color: "#A8B3C7",
-            fontSize: "13px",
-            marginBottom: "12px",
-          }}
-        >
-          Projeto Executivo
-        </div>
-
-        <p
-          style={{
-            color: "#9CA3AF",
-            fontSize: "14px",
-            lineHeight: "1.7",
-            flexGrow: 1,
-          }}
-        >
-          Projeto hidrossanitário e compatibilização BIM para residência unifamiliar.
-        </p>
-
-        <div
-          style={{
-            color: "#00A8E8",
-            fontWeight: 600,
-            marginTop: "16px",
-          }}
-        >
-          Em breve →
-        </div>
-      </div>
-    </div>
-
-    {/* SANTA CASA */}
-
     <Link
-      href="/cases/santa-casa-marilia"
+      href="/cases/residencia-alto-padrao"
       style={{
         textDecoration: "none",
         color: "inherit",
-        display: "block",
       }}
     >
       <div
+        className="case-card"
         style={{
           background: "#111821",
           border: "1px solid rgba(255,255,255,0.08)",
           borderRadius: "20px",
           overflow: "hidden",
-          cursor: "pointer",
+          height: "100%",
         }}
       >
         <img
-          src="/projeto2.png"
-          alt="Santa Casa de Misericórdia"
+          src="/projeto1.png"
+          alt="Residência Alto Padrão"
           style={{
             width: "100%",
             height: "240px",
@@ -491,7 +408,97 @@ export default function Home() {
         <div
           style={{
             padding: "24px",
-            minHeight: "220px",
+            minHeight: "240px",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <div
+            style={{
+              color: "#00A8E8",
+              fontSize: "12px",
+              letterSpacing: "1px",
+              textTransform: "uppercase",
+              marginBottom: "10px",
+              fontWeight: 600,
+            }}
+          >
+            Residencial Alto Padrão
+          </div>
+
+          <h3 style={{ marginBottom: "10px" }}>
+            Residência Alto Padrão
+          </h3>
+
+          <div
+            style={{
+              color: "#A8B3C7",
+              fontSize: "13px",
+              marginBottom: "12px",
+            }}
+          >
+            350 m² • Projeto Executivo
+          </div>
+
+          <p
+            style={{
+              color: "#9CA3AF",
+              fontSize: "14px",
+              lineHeight: "1.7",
+              flexGrow: 1,
+            }}
+          >
+            Projetos complementares desenvolvidos em ambiente BIM para
+            garantir integração entre disciplinas, organização executiva e
+            previsibilidade durante a construção.
+          </p>
+
+          <div
+            style={{
+              color: "#00A8E8",
+              fontWeight: 600,
+              marginTop: "16px",
+            }}
+          >
+            Ver estudo de caso →
+          </div>
+        </div>
+      </div>
+    </Link>
+
+    {/* SANTA CASA */}
+
+    <Link
+      href="/cases/santa-casa-marilia"
+      style={{
+        textDecoration: "none",
+        color: "inherit",
+      }}
+    >
+      <div
+        className="case-card"
+        style={{
+          background: "#111821",
+          border: "1px solid rgba(255,255,255,0.08)",
+          borderRadius: "20px",
+          overflow: "hidden",
+          height: "100%",
+        }}
+      >
+        <img
+          src="/projeto2.png"
+          alt="Santa Casa de Misericórdia de Marília"
+          style={{
+            width: "100%",
+            height: "240px",
+            objectFit: "cover",
+          }}
+        />
+
+        <div
+          style={{
+            padding: "24px",
+            minHeight: "240px",
             display: "flex",
             flexDirection: "column",
           }}
@@ -509,12 +516,8 @@ export default function Home() {
             Hospitalar
           </div>
 
-          <h3
-            style={{
-              marginBottom: "10px",
-            }}
-          >
-            Santa Casa de Misericórdia
+          <h3 style={{ marginBottom: "10px" }}>
+            Santa Casa de Misericórdia de Marília
           </h3>
 
           <div
@@ -535,7 +538,8 @@ export default function Home() {
               flexGrow: 1,
             }}
           >
-            Projeto elétrico, hidrossanitário e compatibilização BIM desenvolvidos para empreendimento hospitalar.
+            Projetos elétricos, hidrossanitários e compatibilização BIM
+            desenvolvidos para empreendimento hospitalar.
           </p>
 
           <div
@@ -553,85 +557,93 @@ export default function Home() {
 
     {/* GALPÃO */}
 
-    <div
+    <Link
+      href="/cases/galpao-comercial"
       style={{
-        background: "#111821",
-        border: "1px solid rgba(255,255,255,0.08)",
-        borderRadius: "20px",
-        overflow: "hidden",
+        textDecoration: "none",
+        color: "inherit",
       }}
     >
-      <img
-        src="/projeto3.png"
-        alt="Galpão Comercial"
-        style={{
-          width: "100%",
-          height: "240px",
-          objectFit: "cover",
-        }}
-      />
-
       <div
+        className="case-card"
         style={{
-          padding: "24px",
-          minHeight: "220px",
-          display: "flex",
-          flexDirection: "column",
+          background: "#111821",
+          border: "1px solid rgba(255,255,255,0.08)",
+          borderRadius: "20px",
+          overflow: "hidden",
+          height: "100%",
         }}
       >
-        <div
+        <img
+          src="/projeto3.png"
+          alt="Galpão Comercial"
           style={{
-            color: "#00A8E8",
-            fontSize: "12px",
-            letterSpacing: "1px",
-            textTransform: "uppercase",
-            marginBottom: "10px",
-            fontWeight: 600,
+            width: "100%",
+            height: "240px",
+            objectFit: "cover",
           }}
-        >
-          Comercial
-        </div>
-
-        <h3
-          style={{
-            marginBottom: "10px",
-          }}
-        >
-          Galpão Comercial
-        </h3>
+        />
 
         <div
           style={{
-            color: "#A8B3C7",
-            fontSize: "13px",
-            marginBottom: "12px",
+            padding: "24px",
+            minHeight: "240px",
+            display: "flex",
+            flexDirection: "column",
           }}
         >
-          Projeto Executivo
-        </div>
+          <div
+            style={{
+              color: "#00A8E8",
+              fontSize: "12px",
+              letterSpacing: "1px",
+              textTransform: "uppercase",
+              marginBottom: "10px",
+              fontWeight: 600,
+            }}
+          >
+            Comercial
+          </div>
 
-        <p
-          style={{
-            color: "#9CA3AF",
-            fontSize: "14px",
-            lineHeight: "1.7",
-            flexGrow: 1,
-          }}
-        >
-          Projeto elétrico e coordenação multidisciplinar para empreendimento comercial.
-        </p>
+          <h3 style={{ marginBottom: "10px" }}>
+            Galpão Comercial
+          </h3>
 
-        <div
-          style={{
-            color: "#00A8E8",
-            fontWeight: 600,
-            marginTop: "16px",
-          }}
-        >
-          Em breve →
+          <div
+            style={{
+              color: "#A8B3C7",
+              fontSize: "13px",
+              marginBottom: "12px",
+            }}
+          >
+            540,24 m² • Projeto Executivo
+          </div>
+
+          <p
+            style={{
+              color: "#9CA3AF",
+              fontSize: "14px",
+              lineHeight: "1.7",
+              flexGrow: 1,
+            }}
+          >
+            Projetos complementares desenvolvidos em ambiente BIM para
+            garantir integração entre disciplinas e maior previsibilidade
+            durante a implantação da edificação.
+          </p>
+
+          <div
+            style={{
+              color: "#00A8E8",
+              fontWeight: 600,
+              marginTop: "16px",
+            }}
+          >
+            Ver estudo de caso →
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   </div>
 </section>
      

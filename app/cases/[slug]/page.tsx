@@ -139,7 +139,7 @@ export default async function CasePage({
       </p>
 
       <a
-        href="https://wa.me/5516999999999"
+        href="https://wa.me/5519983577250"
         style={{
           display: "inline-block",
           background: "#00A8E8",
@@ -165,15 +165,15 @@ export default async function CasePage({
       }}
     >
       <img
-        src="/projeto2.png"
-        alt={project.title}
-        style={{
-          width: "100%",
-          height: "500px",
-          objectFit: "cover",
-          display: "block",
-        }}
-      />
+  src={project.coverImage}
+  alt={project.title}
+  style={{
+    width: "100%",
+    height: "500px",
+    objectFit: "cover",
+    display: "block",
+  }}
+/>
     </div>
   </div>
 </section>
@@ -327,15 +327,15 @@ export default async function CasePage({
     }}
   >
     <img
-      src="/eltscm.png"
-      alt="Vista BIM"
-      style={{
-        width: "100%",
-        height: "500px",
-        objectFit: "cover",
-        borderRadius: "20px",
-      }}
-    />
+  src={project.gallery[0]}
+  alt={project.title}
+  style={{
+    width: "100%",
+    height: "500px",
+    objectFit: "cover",
+    borderRadius: "20px",
+  }}
+/>
 
     <div
       style={{
@@ -344,26 +344,26 @@ export default async function CasePage({
       }}
     >
       <img
-        src="/elt2scm.png"
-        alt="Vista BIM"
-        style={{
-          width: "100%",
-          height: "240px",
-          objectFit: "cover",
-          borderRadius: "20px",
-        }}
-      />
+  src={project.gallery[1]}
+  alt={project.title}
+  style={{
+    width: "100%",
+    height: "240px",
+    objectFit: "cover",
+    borderRadius: "20px",
+  }}
+/>
 
       <img
-        src="/sntscm.png"
-        alt="Vista BIM"
-        style={{
-          width: "100%",
-          height: "240px",
-          objectFit: "cover",
-          borderRadius: "20px",
-        }}
-      />
+  src={project.gallery[2]}
+  alt={project.title}
+  style={{
+    width: "100%",
+    height: "240px",
+    objectFit: "cover",
+    borderRadius: "20px",
+  }}
+/>
     </div>
   </div>
 </section>

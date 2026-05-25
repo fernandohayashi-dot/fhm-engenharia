@@ -38,3 +38,12 @@ body {
   box-shadow: 0 25px 50px rgba(0, 168, 232, 0.15);
   border-color: rgba(0, 168, 232, 0.5);
 }
+.case-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.case-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 168, 232, 0.4) !important;
+}

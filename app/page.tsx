@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "./home.module.css";
 import {
   FileDown,
   Building2,
@@ -51,54 +52,47 @@ export default function Home() {
 
   {/* MENU */}
 
-  <nav
+  <nav className={styles.nav}>
+  <Link
+    href="/"
     style={{
-      display: "flex",
-      gap: "32px",
-      fontSize: "17px",
-      fontWeight: 500,
+      color: "#F5F6F7",
+      textDecoration: "none",
     }}
   >
-    <Link
-      href="/"
-      style={{
-        color: "#F5F6F7",
-        textDecoration: "none",
-      }}
-    >
-      Home
-    </Link>
+    Home
+  </Link>
 
-    <Link
-      href="/servicos"
-      style={{
-        color: "#F5F6F7",
-        textDecoration: "none",
-      }}
-    >
-      Serviços
-    </Link>
+  <Link
+    href="/servicos"
+    style={{
+      color: "#F5F6F7",
+      textDecoration: "none",
+    }}
+  >
+    Serviços
+  </Link>
 
-    <Link
-      href="/cases"
-      style={{
-        color: "#F5F6F7",
-        textDecoration: "none",
-      }}
-    >
-      Portfólio
-    </Link>
+  <Link
+    href="/cases"
+    style={{
+      color: "#F5F6F7",
+      textDecoration: "none",
+    }}
+  >
+    Portfólio
+  </Link>
 
-    <Link
-      href="/contato"
-      style={{
-        color: "#F5F6F7",
-        textDecoration: "none",
-      }}
-    >
-      Contato
-    </Link>
-  </nav>
+  <Link
+    href="/contato"
+    style={{
+      color: "#F5F6F7",
+      textDecoration: "none",
+    }}
+  >
+    Contato
+  </Link>
+</nav>
 </header>
       {/* HERO */}
 
@@ -109,14 +103,7 @@ export default function Home() {
           padding: "90px 40px 60px",
         }}
       >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "60px",
-            alignItems: "center",
-          }}
-        >
+        <div className={styles.hero}>
           {/* TEXTO */}
 
           <div
@@ -148,15 +135,7 @@ export default function Home() {
               Projetos complementares • BIM • Compatibilização
             </div>
 
-            <h1
-              style={{
-                fontSize: "72px",
-                lineHeight: "1.05",
-                fontWeight: "700",
-                letterSpacing: "-2px",
-                marginBottom: "30px",
-              }}
-            >
+            <h1 className={styles.heroTitle}>
               Engenharia complementar BIM para obras executadas com mais previsibilidade.
             </h1>
 
@@ -250,43 +229,39 @@ export default function Home() {
         }}
       >
         <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            display: "flex",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            gap: "20px",
-            color: "#A8B3C7",
-            fontSize: "18px",
-          }}
-        >
-          <span>✓ Compatibilização BIM</span>
-          <span>✓ Projetos Elétricos</span>
-          <span>✓ Projetos Hidrossanitários</span>
-          <span>✓ Coordenação Multidisciplinar</span>
-        </div>
+  style={{
+    maxWidth: "1200px",
+    margin: "0 auto",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "20px",
+    color: "#A8B3C7",
+    fontSize: "18px",
+    textAlign: "center",
+  }}
+>
+  <span>✓ Compatibilização BIM</span>
+  <span>✓ Projetos Elétricos</span>
+  <span>✓ Projetos Hidrossanitários</span>
+  <span>✓ Coordenação Multidisciplinar</span>
+</div>
       </section>
 
       {/* MÉTRICAS */}
 
       <section
-        style={{
-          maxWidth: "1200px",
-          margin: "80px auto",
-          background: "#111821",
-          border: "1px solid rgba(255,255,255,0.08)",
-          borderRadius: "24px",
-          padding: "50px",
-        }}
-      >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3,1fr)",
-            textAlign: "center",
-          }}
-        >
+  style={{
+    width: "80%",
+    maxWidth: "1200px",
+    margin: "70px auto",
+    background: "#111821",
+    border: "1px solid rgba(255,255,255,0.08)",
+    borderRadius: "24px",
+    padding: "15px",
+    boxSizing: "border-box",
+  }}
+>
+        <div className={styles.metricsGrid}>
           <div>
             <div
               style={{
@@ -308,12 +283,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            style={{
-              borderLeft: "1px solid rgba(255,255,255,0.08)",
-              borderRight: "1px solid rgba(255,255,255,0.08)",
-            }}
-          >
+         <div className={styles.metricCenter}>
             <div
               style={{
                 fontSize: "60px",
@@ -366,22 +336,12 @@ export default function Home() {
     padding: "120px 40px",
   }}
 >
-  <h2
-    style={{
-      fontSize: "64px",
-      marginBottom: "60px",
-    }}
-  >
+  <h2 className={styles.sectionTitle}>
     Cases Selecionados
   </h2>
 
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(3, 1fr)",
-      gap: "24px",
-    }}
-  >
+  <div className={styles.casesGrid}>
+
     {/* RESIDÊNCIA */}
 
     <Link
@@ -686,32 +646,15 @@ export default function Home() {
     previsibilidade na execução e documentação técnica completa.
   </p>
 
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "flex-start",
-      gap: "20px",
-      position: "relative",
-    }}
-  >
+  <div className={styles.processGrid}>
+
     {/* LINHA CENTRAL */}
 
-    <div
-      style={{
-        position: "absolute",
-        top: "48px",
-        left: "8%",
-        right: "8%",
-        height: "2px",
-        background: "rgba(0,168,232,0.25)",
-        zIndex: 0,
-      }}
-    />
+    <div className={styles.processLine} />
 
     {/* ETAPA 01 */}
 
-    <div style={{ flex: 1, position: "relative", zIndex: 1 }}>
+    <div className={styles.processItem}>
       <div
         style={{
           width: "90px",
@@ -759,7 +702,7 @@ export default function Home() {
 
     {/* ETAPA 02 */}
 
-    <div style={{ flex: 1, position: "relative", zIndex: 1 }}>
+    <div className={styles.processItem}>
       <div
         style={{
           width: "90px",
@@ -806,7 +749,7 @@ export default function Home() {
 
     {/* ETAPA 03 */}
 
-    <div style={{ flex: 1, position: "relative", zIndex: 1 }}>
+    <div className={styles.processItem}>
       <div
         style={{
           width: "90px",
@@ -854,7 +797,7 @@ export default function Home() {
 
     {/* ETAPA 04 */}
 
-    <div style={{ flex: 1, position: "relative", zIndex: 1 }}>
+    <div className={styles.processItem}>
       <div
         style={{
           width: "90px",
@@ -901,7 +844,7 @@ export default function Home() {
 
     {/* ETAPA 05 */}
 
-    <div style={{ flex: 1, position: "relative", zIndex: 1 }}>
+    <div className={styles.processItem}>
       <div
         style={{
           width: "90px",
@@ -983,13 +926,7 @@ export default function Home() {
     durante a execução da obra.
   </p>
 
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(3, 1fr)",
-      gap: "30px",
-    }}
-  >
+  <div className={styles.servicesGrid}>
 
     {/* ELÉTRICOS */}
 
@@ -1232,13 +1169,7 @@ export default function Home() {
     marginBottom: "80px",
   }}
 >
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(4, 1fr)",
-      textAlign: "center",
-    }}
-  >
+  <div className={styles.aboutGrid}>
     <div>
       <div
         style={{
@@ -1375,7 +1306,7 @@ export default function Home() {
   style={{
     maxWidth: "1200px",
     margin: "140px auto",
-    padding: "0 40px",
+    padding: "0 10px",
   }}
 >
   <div
@@ -1383,15 +1314,16 @@ export default function Home() {
       background: "#111821",
       border: "1px solid rgba(255,255,255,0.08)",
       borderRadius: "28px",
-      padding: "80px 60px",
+      padding: "60px 24px",
       textAlign: "center",
     }}
   >
     <h2
       style={{
-        fontSize: "52px",
+        fontSize: "clamp(32px, 8vw, 52px)",
         fontWeight: "700",
         marginBottom: "24px",
+        lineHeight: "1.15",
       }}
     >
       Vamos conversar sobre seu projeto?
@@ -1400,8 +1332,8 @@ export default function Home() {
     <p
       style={{
         color: "#9CA3AF",
-        fontSize: "20px",
-        lineHeight: "1.9",
+        fontSize: "clamp(16px, 4vw, 20px)",
+        lineHeight: "1.8",
         maxWidth: "850px",
         margin: "0 auto 50px",
       }}
@@ -1479,16 +1411,13 @@ export default function Home() {
   }}
 >
   <div
-    style={{
-      maxWidth: "1200px",
-      margin: "0 auto",
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      flexWrap: "wrap",
-      gap: "40px",
-    }}
-  >
+  className={styles.footerContent}
+  style={{
+    maxWidth: "1200px",
+    margin: "0 auto",
+    gap: "40px",
+  }}
+>
     {/* INFORMAÇÕES */}
 
     <div>

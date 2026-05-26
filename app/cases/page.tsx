@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { cases } from "../../data/cases";
+import styles from "../home.module.css";
+import Header from "@/components/Header";
 
 export default function CasesPage() {
   return (
@@ -10,98 +12,15 @@ export default function CasesPage() {
         minHeight: "100vh",
       }}
     >
-      {/* HEADER */}
-
-<header
-  style={{
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "24px 80px",
-    borderBottom: "1px solid rgba(255,255,255,0.08)",
-    position: "sticky",
-    top: 0,
-    background: "rgba(13,17,22,0.95)",
-    backdropFilter: "blur(10px)",
-    zIndex: 100,
-  }}
->
-  {/* LOGO */}
-
-  <Link href="/">
-    <img
-      src="/logo.png"
-      alt="FHM Engenharia"
-      style={{
-        height: "65px",
-        display: "block",
-        cursor: "pointer",
-      }}
-    />
-  </Link>
-
-  {/* MENU */}
-
-  <nav
-  style={{
-    display: "flex",
-    gap: "32px",
-    fontSize: "17px",
-    fontWeight: 500,
-  }}
->
-  <Link
-    href="/"
-    style={{
-      color: "#F5F6F7",
-      textDecoration: "none",
-    }}
-  >
-    Home
-  </Link>
-
-  <Link
-    href="/servicos"
-    style={{
-      color: "#F5F6F7",
-      textDecoration: "none",
-    }}
-  >
-    Serviços
-  </Link>
-
-  <Link
-    href="/cases"
-    style={{
-      color: "#00A8E8",
-      textDecoration: "none",
-      fontWeight: 700,
-    }}
-  >
-    Portfólio
-  </Link>
-
-  <a
-    href="https://wa.me/5514998872510"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{
-      color: "#F5F6F7",
-      textDecoration: "none",
-    }}
-  >
-    Contato
-  </a>
-</nav>
-</header>
-
+      <Header active="cases" />
+     
       {/* HERO */}
 
       <section
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
-          padding: "60px 40px 100px",
+          padding: "60px 20px 100px",
         }}
       >
         <div
@@ -117,13 +36,13 @@ export default function CasesPage() {
         </div>
 
         <h1
-          style={{
-            fontSize: "72px",
-            lineHeight: "1.1",
-            maxWidth: "900px",
-            marginBottom: "30px",
-          }}
-        >
+  style={{
+    fontSize: "clamp(42px, 8vw, 72px)",
+    lineHeight: "1.1",
+    maxWidth: "900px",
+    marginBottom: "30px",
+  }}
+>
           Projetos desenvolvidos
           <br />
           com metodologia BIM
@@ -132,7 +51,7 @@ export default function CasesPage() {
         <p
           style={{
             color: "#B8C2D0",
-            fontSize: "20px",
+            fontSize: "clamp(18px, 2.5vw, 20px)",
             lineHeight: "1.8",
             maxWidth: "800px",
             marginBottom: "40px",
@@ -164,13 +83,14 @@ export default function CasesPage() {
         {/* CASES */}
 
         <h2
-          style={{
-            fontSize: "52px",
-            marginBottom: "40px",
-          }}
-        >
-          Cases Selecionados
-        </h2>
+  style={{
+    fontSize: "clamp(36px, 8vw, 52px)",
+    lineHeight: "1.15",
+    marginBottom: "40px",
+  }}
+>
+  Cases Selecionados
+</h2>
 
         <div
           style={{
@@ -284,7 +204,7 @@ export default function CasesPage() {
   style={{
     maxWidth: "1400px",
     margin: "0 auto",
-    padding: "0 40px 120px",
+    padding: "0 20px 100px",
   }}
 >
   <div
@@ -293,7 +213,7 @@ export default function CasesPage() {
         "linear-gradient(135deg,#0D1726 0%, #17263D 100%)",
       border: "1px solid rgba(255,255,255,0.08)",
       borderRadius: "32px",
-      padding: "100px 80px",
+      padding: "clamp(40px, 8vw, 100px)",
       textAlign: "center",
       position: "relative",
       overflow: "hidden",
@@ -314,13 +234,17 @@ export default function CasesPage() {
 
     <h2
       style={{
-        fontSize: "72px",
+        fontSize: "clamp(36px, 8vw, 72px)",
         lineHeight: "1.1",
         maxWidth: "950px",
         margin: "0 auto 24px",
       }}
     >
-      Precisa de projetos elétricos, hidrossanitários ou compatibilização BIM?
+      Precisa de projetos elétricos,
+      <br />
+      hidrossanitários ou
+      <br />
+      compatibilização BIM?
     </h2>
 
     <p
@@ -329,13 +253,15 @@ export default function CasesPage() {
         maxWidth: "850px",
         margin: "0 auto 40px",
         lineHeight: "1.9",
-        fontSize: "20px",
+        fontSize: "clamp(17px, 2.5vw, 20px)",
       }}
     >
-      Desenvolvemos projetos elétricos, hidrossanitários e
-      compatibilização BIM para arquitetos, construtoras e
-      incorporadoras que buscam maior previsibilidade,
-      redução de interferências e documentação executiva organizada.
+      Desenvolvemos projetos elétricos,
+      hidrossanitários e compatibilização BIM
+      para arquitetos, construtoras e incorporadoras
+      que buscam maior previsibilidade,
+      redução de interferências e documentação
+      executiva organizada.
     </p>
 
     <a

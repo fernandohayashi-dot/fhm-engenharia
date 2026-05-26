@@ -53,3 +53,22 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+.heroTitle {
+  font-size: 72px;
+  line-height: 1.1;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 56px;
+  }
+}
+.sectionTitle {
+  font-size: 56px;
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 36px;
+  }
+}

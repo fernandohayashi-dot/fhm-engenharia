@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./home.module.css";
+import Header from "@/components/Header";
 import {
   FileDown,
   Building2,
@@ -20,80 +21,8 @@ export default function Home() {
         fontFamily: "Arial, sans-serif",
       }}
     >
-     {/* HEADER */}
-
-<header
-  style={{
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "24px 80px",
-    borderBottom: "1px solid rgba(255,255,255,0.08)",
-    position: "sticky",
-    top: 0,
-    background: "rgba(13,17,22,0.95)",
-    backdropFilter: "blur(10px)",
-    zIndex: 100,
-  }}
->
-  {/* LOGO */}
-
-  <Link href="/">
-    <img
-      src="/logo.png"
-      alt="FHM Engenharia"
-      style={{
-        height: "65px",
-        display: "block",
-        cursor: "pointer",
-      }}
-    />
-  </Link>
-
-  {/* MENU */}
-
-  <nav className={styles.nav}>
-  <Link
-    href="/"
-    style={{
-      color: "#F5F6F7",
-      textDecoration: "none",
-    }}
-  >
-    Home
-  </Link>
-
-  <Link
-    href="/servicos"
-    style={{
-      color: "#F5F6F7",
-      textDecoration: "none",
-    }}
-  >
-    Serviços
-  </Link>
-
-  <Link
-    href="/cases"
-    style={{
-      color: "#F5F6F7",
-      textDecoration: "none",
-    }}
-  >
-    Portfólio
-  </Link>
-
-  <Link
-    href="/contato"
-    style={{
-      color: "#F5F6F7",
-      textDecoration: "none",
-    }}
-  >
-    Contato
-  </Link>
-</nav>
-</header>
+      <Header active="home" />
+ 
       {/* HERO */}
 
       <section

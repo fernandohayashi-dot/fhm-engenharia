@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Puzzle, Droplets, Zap } from "lucide-react";
+import Header from "@/components/Header";
 
 const services = [
   {
@@ -25,106 +26,27 @@ const services = [
   },
 ];
 
-export default function ServicosPage() {
+export default function CasesPage() {
   return (
     <main
       style={{
         background: "#0D1116",
-        color: "#FFFFFF",
+        color: "#F5F6F7",
         minHeight: "100vh",
       }}
     >
-            {/* HEADER */}
-
-      <header
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "24px 80px",
-          borderBottom: "1px solid rgba(255,255,255,0.08)",
-          position: "sticky",
-          top: 0,
-          background: "rgba(13,17,22,0.95)",
-          backdropFilter: "blur(10px)",
-          zIndex: 100,
-        }}
-      >
-        {/* LOGO */}
-
-        <Link href="/">
-          <img
-            src="/logo.png"
-            alt="FHM Engenharia"
-            style={{
-              height: "65px",
-              display: "block",
-              cursor: "pointer",
-            }}
-          />
-        </Link>
-
-        {/* MENU */}
-
-        <nav
-          style={{
-            display: "flex",
-            gap: "32px",
-            fontSize: "17px",
-            fontWeight: 500,
-          }}
-        >
-          <Link
-            href="/"
-            style={{
-              color: "#F5F6F7",
-              textDecoration: "none",
-            }}
-          >
-            Home
-          </Link>
-
-          <Link
-            href="/servicos"
-            style={{
-              color: "#00A8E8",
-              textDecoration: "none",
-              fontWeight: 700,
-            }}
-          >
-            Serviços
-          </Link>
-
-          <Link
-            href="/cases"
-            style={{
-              color: "#F5F6F7",
-              textDecoration: "none",
-            }}
-          >
-            Portfólio
-          </Link>
-
-          <Link
-            href="/contato"
-            style={{
-              color: "#F5F6F7",
-              textDecoration: "none",
-            }}
-          >
-            Contato
-          </Link>
-        </nav>
-      </header>
+      <Header active="cases" />
       {/* HERO */}
 
       <section
-        style={{
-          maxWidth: "1400px",
-          margin: "0 auto",
-          padding: "120px 40px 100px",
-        }}
-      >
+  style={{
+    maxWidth: "1400px",
+    width: "100%",
+    boxSizing: "border-box",
+    margin: "0 auto",
+    padding: "80px 24px 60px",
+  }}
+>
         <div
           style={{
             color: "#00A8E8",
@@ -139,15 +61,17 @@ export default function ServicosPage() {
         </div>
 
         <h1
-          style={{
-            fontSize: "72px",
-            lineHeight: "1.05",
-            maxWidth: "1500px",
-            marginBottom: "30px",
-          }}
-        >
-          Projetos complementares desenvolvidos em ambiente BIM
-        </h1>
+  style={{
+    fontSize: "46px",
+    lineHeight: "1.05",
+    marginBottom: "30px",
+    maxWidth: "100%",
+    overflowWrap: "break-word",
+    wordBreak: "break-word",
+  }}
+>
+  Projetos complementares desenvolvidos em ambiente BIM
+</h1>
 
         <p
           style={{
@@ -187,23 +111,34 @@ export default function ServicosPage() {
         style={{
           maxWidth: "1400px",
           margin: "0 auto",
-          padding: "0 40px 120px",
+          padding:
+  typeof window !== "undefined" &&
+  window.innerWidth < 768
+    ? "0 24px 80px"
+    : "0 40px 120px",
         }}
       >
         <h2
-          style={{
-            fontSize: "56px",
-            marginBottom: "50px",
-          }}
-        >
-          Especialidades
-        </h2>
+  style={{
+    fontSize: "clamp(36px, 5vw, 56px)",
+    marginBottom: "40px",
+    lineHeight: "1.2",
+  }}
+>
+  Especialidades
+</h2>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "30px",
+            gridTemplateColumns:
+  "repeat(auto-fit, minmax(320px, 1fr))",
+
+gap:
+  typeof window !== "undefined" &&
+  window.innerWidth < 768
+    ? "20px"
+    : "30px",
           }}
         >
           {services.map((service) => {
@@ -279,115 +214,185 @@ export default function ServicosPage() {
         </div>
       </section>
 
-      {/* DIFERENCIAIS */}
+   {/* DIFERENCIAIS */}
 
-      <section
+<section
+  style={{
+    maxWidth: "1400px",
+    margin: "0 auto",
+    padding:
+      typeof window !== "undefined" &&
+      window.innerWidth < 768
+        ? "0 24px 80px"
+        : "0 40px 120px",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "clamp(32px, 6vw, 64px)",
+
+      lineHeight: "1.2",
+
+      marginBottom:
+        typeof window !== "undefined" &&
+        window.innerWidth < 768
+          ? "20px"
+          : "50px",
+    }}
+  >
+    Por que trabalhar com a FHM?
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns:
+        "repeat(auto-fit, minmax(320px, 1fr))",
+      gap: "24px",
+    }}
+  >
+    {[
+      "Compatibilização entre disciplinas",
+      "Redução de conflitos e retrabalho",
+      "Documentação executiva organizada",
+      "Maior previsibilidade durante a obra",
+      "Projetos desenvolvidos em ambiente BIM",
+      "Suporte técnico especializado",
+    ].map((item) => (
+      <div
+        key={item}
         style={{
-          maxWidth: "1400px",
-          margin: "0 auto",
-          padding: "0 40px 120px",
+          background: "#111821",
+          border: "1px solid rgba(255,255,255,0.08)",
+          borderRadius: "18px",
+
+          padding:
+            typeof window !== "undefined" &&
+            window.innerWidth < 768
+              ? "18px"
+              : "28px",
+
+          fontSize:
+            typeof window !== "undefined" &&
+            window.innerWidth < 768
+              ? "15px"
+              : "18px",
+
+          lineHeight: "1.6",
         }}
       >
-        <h2
-          style={{
-            fontSize: "56px",
-            marginBottom: "50px",
-          }}
-        >
-          Por que trabalhar com a FHM?
-        </h2>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "24px",
-          }}
-        >
-          {[
-            "Compatibilização entre disciplinas",
-            "Redução de conflitos e retrabalho",
-            "Documentação executiva organizada",
-            "Maior previsibilidade durante a obra",
-            "Projetos desenvolvidos em ambiente BIM",
-            "Suporte técnico especializado",
-          ].map((item) => (
-            <div
-              key={item}
-              style={{
-                background: "#111821",
-                border: "1px solid rgba(255,255,255,0.08)",
-                borderRadius: "18px",
-                padding: "28px",
-                fontSize: "18px",
-                lineHeight: "1.6",
-              }}
-            >
-              ✓ {item}
-            </div>
-          ))}
-        </div>
-      </section>
-
+        ✓ {item}
+      </div>
+    ))}
+  </div>
+</section>
       {/* CTA */}
 
-      <section
-        style={{
-          maxWidth: "1400px",
-          margin: "0 auto",
-          padding: "0 40px 120px",
-        }}
-      >
-        <div
-          style={{
-            background:
-              "linear-gradient(135deg,#0D1726 0%, #17263D 100%)",
-            border: "1px solid rgba(255,255,255,0.08)",
-            borderRadius: "32px",
-            padding: "80px 60px",
-            textAlign: "center",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "56px",
-              lineHeight: "1.2",
-              marginBottom: "24px",
-            }}
-          >
-            Precisa de projetos complementares?
-          </h2>
+<section
+  style={{
+    maxWidth: "1400px",
+    margin: "0 auto",
+    padding:
+      typeof window !== "undefined" &&
+      window.innerWidth < 768
+        ? "0 24px 80px"
+        : "0 40px 120px",
+  }}
+>
+  <div
+    style={{
+      background:
+        "linear-gradient(135deg,#0D1726 0%, #17263D 100%)",
+      border: "1px solid rgba(255,255,255,0.08)",
+      borderRadius:
+        typeof window !== "undefined" &&
+        window.innerWidth < 768
+          ? "24px"
+          : "32px",
 
-          <p
-            style={{
-              color: "#A8B3C7",
-              maxWidth: "800px",
-              margin: "0 auto 40px",
-              lineHeight: "1.8",
-              fontSize: "18px",
-            }}
-          >
-            Entre em contato para avaliar seu empreendimento e receber
-            uma proposta técnica adequada às necessidades do projeto.
-          </p>
+      padding:
+        typeof window !== "undefined" &&
+        window.innerWidth < 768
+          ? "50px 24px"
+          : "80px 60px",
 
-          <a
-            href="https://wa.me/5519983577250"
-            target="_blank"
-            style={{
-              display: "inline-block",
-              background: "#00A8E8",
-              color: "#FFFFFF",
-              padding: "18px 36px",
-              borderRadius: "14px",
-              textDecoration: "none",
-              fontWeight: 600,
-            }}
-          >
-            Solicitar orçamento
-          </a>
-        </div>
-      </section>
+      textAlign: "center",
+    }}
+  >
+    <h2
+  style={{
+    fontSize: "clamp(32px, 6vw, 64px)",
+
+    lineHeight: "1.1",
+    marginBottom: "24px",
+  }}
+>
+  {typeof window !== "undefined" && window.innerWidth < 768 ? (
+    <>
+      Precisa de projetos
+      <br />
+      complementares?
+    </>
+  ) : (
+    "Precisa de projetos complementares?"
+  )}
+</h2>
+
+    <p
+      style={{
+        color: "#A8B3C7",
+
+        maxWidth:
+          typeof window !== "undefined" &&
+          window.innerWidth < 768
+            ? "100%"
+            : "800px",
+
+        margin: "0 auto 40px",
+
+        lineHeight: "1.8",
+
+        fontSize:
+          typeof window !== "undefined" &&
+          window.innerWidth < 768
+            ? "16px"
+            : "18px",
+      }}
+    >
+      Entre em contato para avaliar seu empreendimento e receber
+      uma proposta técnica adequada às necessidades do projeto.
+    </p>
+
+    <a
+      href="https://wa.me/5519983577250"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: "inline-block",
+        background: "#00A8E8",
+        color: "#FFFFFF",
+
+        padding:
+          typeof window !== "undefined" &&
+          window.innerWidth < 768
+            ? "16px 28px"
+            : "18px 36px",
+
+        borderRadius: "14px",
+        textDecoration: "none",
+        fontWeight: 600,
+
+        fontSize:
+          typeof window !== "undefined" &&
+          window.innerWidth < 768
+            ? "16px"
+            : "18px",
+      }}
+    >
+      Solicitar orçamento
+    </a>
+  </div>
+</section>
     </main>
   );
 }

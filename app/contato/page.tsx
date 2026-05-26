@@ -1,12 +1,14 @@
-export default function ContatoPage() {
+import Header from "@/components/Header";
+export default function CasesPage() {
   return (
     <main
       style={{
-        background: "#050B14",
-        minHeight: "100vh",
+        background: "#0D1116",
         color: "#F5F6F7",
+        minHeight: "100vh",
       }}
     >
+      <Header active="cases" />
       {/* HERO */}
 
       <section

@@ -18,7 +18,7 @@ export default function CasesPage() {
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
-          padding: "80px 40px 120px",
+          padding: "80px 24px 120px",
         }}
       >
         <div
@@ -35,8 +35,8 @@ export default function CasesPage() {
 
         <h1
           style={{
-            fontSize: "72px",
-            lineHeight: "1.1",
+            fontSize: "clamp(36px, 6vw, 72px)",
+lineHeight: "1.1",
             maxWidth: "900px",
             marginBottom: "30px",
           }}
@@ -51,7 +51,7 @@ export default function CasesPage() {
         <p
           style={{
             color: "#B8C2D0",
-            fontSize: "20px",
+            fontSize: "clamp(16px, 2vw, 20px)",
             lineHeight: "1.8",
             maxWidth: "850px",
           }}
@@ -78,12 +78,12 @@ export default function CasesPage() {
             background: "#111821",
             border: "1px solid rgba(255,255,255,0.08)",
             borderRadius: "28px",
-            padding: "60px",
+            padding: "clamp(30px, 5vw, 60px)",
           }}
         >
           <h2
             style={{
-              fontSize: "42px",
+              fontSize: "clamp(28px, 4vw, 42px)",
               marginBottom: "24px",
             }}
           >
@@ -130,7 +130,8 @@ export default function CasesPage() {
       >
         <h2
           style={{
-            fontSize: "52px",
+            fontSize: "clamp(30px, 5vw, 52px)",
+lineHeight: "1.2",
             marginBottom: "40px",
           }}
         >
@@ -173,12 +174,12 @@ export default function CasesPage() {
                 background: "#111821",
                 border: "1px solid rgba(255,255,255,0.08)",
                 borderRadius: "22px",
-                padding: "32px",
+                padding: "clamp(24px, 4vw, 32px)",
               }}
             >
               <h3
                 style={{
-                  fontSize: "24px",
+                  fontSize: "clamp(20px, 3vw, 24px)",
                   marginBottom: "16px",
                   color: "#00A8E8",
                 }}
@@ -213,12 +214,12 @@ export default function CasesPage() {
             background: "#111821",
             border: "1px solid rgba(255,255,255,0.08)",
             borderRadius: "28px",
-            padding: "60px",
+            padding: "clamp(30px, 5vw, 60px)",
           }}
         >
           <h2
             style={{
-              fontSize: "42px",
+              fontSize: "clamp(28px, 4vw, 42px)",
               marginBottom: "30px",
             }}
           >
@@ -229,7 +230,7 @@ export default function CasesPage() {
             style={{
               color: "#A8B3C7",
               lineHeight: "2.2",
-              fontSize: "18px",
+              fontSize: "clamp(16px, 2vw, 18px)",
               paddingLeft: "20px",
             }}
           >
@@ -245,81 +246,85 @@ export default function CasesPage() {
 
       {/* CTA FINAL */}
 
-      <section
-        style={{
-          maxWidth: "1400px",
-          margin: "0 auto",
-          padding: "0 40px 120px",
-        }}
-      >
-        <div
-          style={{
-            background:
-              "linear-gradient(135deg,#0D1726 0%, #17263D 100%)",
-            border: "1px solid rgba(255,255,255,0.08)",
-            borderRadius: "32px",
-            padding: "100px 80px",
-            textAlign: "center",
-          }}
-        >
-          <div
-            style={{
-              color: "#00A8E8",
-              fontSize: "14px",
-              fontWeight: 700,
-              letterSpacing: "2px",
-              textTransform: "uppercase",
-              marginBottom: "20px",
-            }}
-          >
-            Vamos conversar
-          </div>
+<section
+  style={{
+    maxWidth: "1400px",
+    margin: "0 auto",
+    padding: "0 20px 100px",
+  }}
+>
+  <div
+    style={{
+      background:
+        "linear-gradient(135deg,#0D1726 0%, #17263D 100%)",
+      border: "1px solid rgba(255,255,255,0.08)",
+      borderRadius: "32px",
+      padding: "clamp(40px, 8vw, 100px)",
+      textAlign: "center",
+      position: "relative",
+      overflow: "hidden",
+    }}
+  >
+    <div
+      style={{
+        color: "#00A8E8",
+        fontSize: "14px",
+        fontWeight: 700,
+        letterSpacing: "2px",
+        textTransform: "uppercase",
+        marginBottom: "20px",
+      }}
+    >
+      Solicite uma proposta
+    </div>
 
-          <h2
-            style={{
-              fontSize: "72px",
-              lineHeight: "1.1",
-              maxWidth: "900px",
-              margin: "0 auto 24px",
-            }}
-          >
-            Pronto para desenvolver seu próximo projeto?
-          </h2>
+    <h2
+      style={{
+        fontSize: "clamp(36px, 8vw, 72px)",
+        lineHeight: "1.1",
+        maxWidth: "950px",
+        margin: "0 auto 24px",
+      }}
+    >
+      Pronto para desenvolver seu próximo projeto?
+    </h2>
 
-          <p
-            style={{
-              color: "#A8B3C7",
-              maxWidth: "850px",
-              margin: "0 auto 40px",
-              lineHeight: "1.9",
-              fontSize: "20px",
-            }}
-          >
-            Entre em contato para solicitar uma proposta e conhecer
-            como a metodologia BIM pode contribuir para maior
-            previsibilidade, organização e eficiência na execução da
-            sua obra.
-          </p>
+    <p
+      style={{
+        color: "#A8B3C7",
+        maxWidth: "850px",
+        margin: "0 auto 40px",
+        lineHeight: "1.9",
+        fontSize: "clamp(17px, 2.5vw, 20px)",
+      }}
+    >
+      Desenvolvemos projetos elétricos,
+      hidrossanitários e compatibilização BIM
+      para arquitetos, construtoras e incorporadoras
+      que buscam maior previsibilidade,
+      redução de interferências e documentação
+      executiva organizada.
+    </p>
 
-          <a
-            href="https://wa.me/5519983577250"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-block",
-              background: "#00A8E8",
-              color: "#FFFFFF",
-              padding: "18px 40px",
-              borderRadius: "14px",
-              textDecoration: "none",
-              fontWeight: 600,
-              fontSize: "18px",
-            }}
-          >
-            Solicitar orçamento
-          </a>
-        </div>
-      </section>
+    <a
+      href="https://wa.me/5519983577250"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: "inline-block",
+        background: "#00A8E8",
+        color: "#FFFFFF",
+        padding: "18px 40px",
+        borderRadius: "14px",
+        textDecoration: "none",
+        fontWeight: 600,
+        fontSize: "18px",
+      }}
+    >
+      Solicitar orçamento
+    </a>
+  </div>
+</section>
     </main>
   );
 }

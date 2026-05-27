@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Header from "@/components/Header";
 import {
   Droplets,
   Workflow,
@@ -44,19 +45,21 @@ export default function ProjetoHidrossanitarioPage() {
         fontFamily: "Arial, sans-serif",
       }}
     >
+      <Header active="servicos" />
       {/* HERO */}
 
       <section
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "120px 40px",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "80px",
-          alignItems: "center",
-        }}
-      >
+  style={{
+    maxWidth: "1200px",
+    margin: "0 auto",
+    padding: "120px 24px",
+    display: "grid",
+    gridTemplateColumns:
+      "repeat(auto-fit, minmax(320px, 1fr))",
+    gap: "60px",
+    alignItems: "center",
+  }}
+>
         <div>
           <div
             style={{
@@ -72,25 +75,25 @@ export default function ProjetoHidrossanitarioPage() {
           </div>
 
           <h1
-            style={{
-              fontSize: "72px",
-              lineHeight: "1.05",
-              marginBottom: "32px",
-              fontWeight: 700,
-            }}
-          >
-            Projetos hidrossanitários desenvolvidos para garantir eficiência e previsibilidade
-          </h1>
+  style={{
+    fontSize: "clamp(36px, 6vw, 72px)",
+    lineHeight: "1.1",
+    marginBottom: "32px",
+    fontWeight: 700,
+  }}
+>
+  Projetos hidrossanitários desenvolvidos para garantir eficiência e previsibilidade
+</h1>
 
           <p
-            style={{
-              color: "#A8B3C7",
-              fontSize: "22px",
-              lineHeight: "1.8",
-              maxWidth: "720px",
-              marginBottom: "40px",
-            }}
-          >
+  style={{
+    color: "#A8B3C7",
+    fontSize: "clamp(16px, 2vw, 22px)",
+    lineHeight: "1.8",
+    maxWidth: "720px",
+    marginBottom: "40px",
+  }}
+>
             Desenvolvemos projetos executivos de água fria, água quente,
             esgoto sanitário, ventilação e águas pluviais em ambiente BIM
             para residências, edifícios comerciais e empreendimentos
@@ -105,7 +108,7 @@ export default function ProjetoHidrossanitarioPage() {
             }}
           >
             <a
-              href="https://wa.me/5514998872510"
+              href="https://wa.me/5519983577250"
               target="_blank"
               style={{
                 background: "#00A8E8",
@@ -170,7 +173,8 @@ export default function ProjetoHidrossanitarioPage() {
             margin: "0 auto",
             padding: "32px 40px",
             display: "grid",
-            gridTemplateColumns: "repeat(4,1fr)",
+            gridTemplateColumns:
+  "repeat(auto-fit, minmax(220px, 1fr))",
             gap: "20px",
             textAlign: "center",
           }}
@@ -193,7 +197,7 @@ export default function ProjetoHidrossanitarioPage() {
       >
         <h2
           style={{
-            fontSize: "56px",
+            fontSize: "clamp(30px, 5vw, 56px)",
             marginBottom: "32px",
           }}
         >
@@ -203,7 +207,7 @@ export default function ProjetoHidrossanitarioPage() {
         <p
           style={{
             color: "#A8B3C7",
-            fontSize: "20px",
+            fontSize: "clamp(16px, 2vw, 20px)",
             lineHeight: "2",
             maxWidth: "1000px",
             marginBottom: "24px",
@@ -239,7 +243,7 @@ export default function ProjetoHidrossanitarioPage() {
       >
         <h2
           style={{
-            fontSize: "56px",
+            fontSize: "clamp(30px, 5vw, 56px)",
             marginBottom: "60px",
           }}
         >
@@ -249,7 +253,8 @@ export default function ProjetoHidrossanitarioPage() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(3,1fr)",
+            gridTemplateColumns:
+  "repeat(auto-fit, minmax(320px, 1fr))",
             gap: "24px",
           }}
         >
@@ -281,7 +286,7 @@ export default function ProjetoHidrossanitarioPage() {
 
               <h3
                 style={{
-                  fontSize: "30px",
+                  fontSize: "clamp(24px, 4vw, 30px)",
                   marginBottom: "20px",
                 }}
               >
@@ -313,7 +318,7 @@ export default function ProjetoHidrossanitarioPage() {
       >
         <h2
           style={{
-            fontSize: "56px",
+            fontSize: "clamp(30px, 5vw, 56px)",
             marginBottom: "50px",
           }}
         >
@@ -323,7 +328,8 @@ export default function ProjetoHidrossanitarioPage() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(3,1fr)",
+            gridTemplateColumns:
+  "repeat(auto-fit, minmax(280px, 1fr))",
             gap: "20px",
           }}
         >
@@ -340,7 +346,11 @@ export default function ProjetoHidrossanitarioPage() {
                 gap: "12px",
               }}
             >
-              <CheckCircle2 size={20} color="#00A8E8" />
+              <CheckCircle2
+  size={20}
+  color="#00A8E8"
+  style={{ flexShrink: 0 }}
+/>
               {item}
             </div>
           ))}
@@ -357,57 +367,61 @@ export default function ProjetoHidrossanitarioPage() {
         }}
       >
         <div
-          style={{
-            background:
-              "linear-gradient(135deg,#0F1C2D 0%,#182B48 100%)",
-            border: "1px solid rgba(255,255,255,0.08)",
-            borderRadius: "32px",
-            padding: "80px",
-            textAlign: "center",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "54px",
-              marginBottom: "24px",
-            }}
-          >
-            Precisa de um projeto hidrossanitário?
-          </h2>
+  style={{
+    background:
+      "linear-gradient(135deg,#0F1C2D 0%,#182B48 100%)",
+    border: "1px solid rgba(255,255,255,0.08)",
+    borderRadius: "32px",
+    padding: "clamp(40px, 6vw, 80px)",
+    textAlign: "center",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "clamp(32px, 5vw, 54px)",
+      lineHeight: "1.15",
+      marginBottom: "24px",
+      maxWidth: "900px",
+      margin: "0 auto 24px",
+    }}
+  >
+    Precisa de um projeto hidrossanitário?
+  </h2>
 
-          <p
-            style={{
-              color: "#A8B3C7",
-              maxWidth: "800px",
-              margin: "0 auto 40px",
-              lineHeight: "1.9",
-              fontSize: "18px",
-            }}
-          >
-            Desenvolvemos projetos completos em ambiente BIM para garantir
-            funcionalidade, compatibilidade entre disciplinas e documentação
-            técnica organizada para a execução da obra.
-          </p>
+  <p
+    style={{
+      color: "#A8B3C7",
+      maxWidth: "800px",
+      margin: "0 auto 40px",
+      lineHeight: "1.9",
+      fontSize: "clamp(16px, 2vw, 18px)",
+    }}
+  >
+    Desenvolvemos projetos completos em ambiente BIM para garantir
+    funcionalidade, compatibilidade entre disciplinas e documentação
+    técnica organizada para a execução da obra.
+  </p>
 
-          <a
-            href="https://wa.me/5514998872510"
-            target="_blank"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "10px",
-              background: "#00A8E8",
-              color: "#FFF",
-              textDecoration: "none",
-              padding: "18px 34px",
-              borderRadius: "14px",
-              fontWeight: 600,
-            }}
-          >
-            Solicitar orçamento
-            <ArrowRight size={18} />
-          </a>
-        </div>
+  <a
+    href="https://wa.me/5519983577250"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "10px",
+      background: "#00A8E8",
+      color: "#FFF",
+      textDecoration: "none",
+      padding: "18px 34px",
+      borderRadius: "14px",
+      fontWeight: 600,
+    }}
+  >
+    Solicitar orçamento
+    <ArrowRight size={18} />
+  </a>
+</div>
       </section>
     </main>
   );

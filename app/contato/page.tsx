@@ -75,9 +75,10 @@ export default function CasesPage() {
             background: "#111821",
             border: "1px solid rgba(255,255,255,0.08)",
             borderRadius: "24px",
-            padding: "50px",
+            padding: "clamp(24px, 5vw, 50px)",
             display: "grid",
-            gridTemplateColumns: "1fr 1fr",
+            gridTemplateColumns:
+  "repeat(auto-fit, minmax(320px, 1fr))",
             gap: "50px",
           }}
         >
@@ -126,7 +127,7 @@ export default function CasesPage() {
                   E-mail
                 </strong>
                 <br />
-                contato@fhmengenharia.com
+                fernandohayashi@gmail.com
               </div>
 
               <div>

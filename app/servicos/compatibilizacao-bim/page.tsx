@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Header from "@/components/Header";
 import {
   Workflow,
   Search,
@@ -18,13 +19,14 @@ export default function CompatibilizacaoBIMPage() {
         fontFamily: "Arial, sans-serif",
       }}
     >
+      <Header active="servicos" />
       {/* HERO */}
 
       <section
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
-          padding: "120px 40px",
+          padding: "120px 24px",
         }}
       >
         <div
@@ -42,8 +44,8 @@ export default function CompatibilizacaoBIMPage() {
 
         <h1
           style={{
-            fontSize: "72px",
-            lineHeight: "1.05",
+            fontSize: "clamp(36px, 6vw, 72px)",
+lineHeight: "1.1",
             maxWidth: "1500px",
             marginBottom: "30px",
           }}
@@ -54,7 +56,7 @@ export default function CompatibilizacaoBIMPage() {
         <p
           style={{
             color: "#A8B3C7",
-            fontSize: "22px",
+            fontSize: "clamp(16px, 2vw, 22px)",
             lineHeight: "1.8",
             maxWidth: "1500px",
             marginBottom: "50px",
@@ -66,7 +68,7 @@ export default function CompatibilizacaoBIMPage() {
         </p>
 
         <a
-          href="https://wa.me/55SEUNUMERO"
+          href="https://wa.me/5519983577250"
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -94,7 +96,8 @@ export default function CompatibilizacaoBIMPage() {
       >
         <h2
           style={{
-            fontSize: "56px",
+            fontSize: "clamp(30px, 5vw, 56px)",
+lineHeight: "1.2",
             marginBottom: "40px",
           }}
         >
@@ -104,7 +107,7 @@ export default function CompatibilizacaoBIMPage() {
         <p
           style={{
             color: "#A8B3C7",
-            fontSize: "20px",
+            fontSize: "clamp(16px, 2vw, 20px)",
             lineHeight: "2",
             maxWidth: "1500px",
           }}
@@ -118,7 +121,7 @@ export default function CompatibilizacaoBIMPage() {
         <p
           style={{
             color: "#A8B3C7",
-            fontSize: "20px",
+            fontSize: "clamp(16px, 2vw, 20px)",
             lineHeight: "2",
             maxWidth: "1500px",
             marginTop: "30px",
@@ -140,7 +143,7 @@ export default function CompatibilizacaoBIMPage() {
       >
         <h2
           style={{
-            fontSize: "56px",
+            fontSize: "clamp(30px, 5vw, 56px)",
             marginBottom: "60px",
           }}
         >
@@ -150,7 +153,8 @@ export default function CompatibilizacaoBIMPage() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
+            gridTemplateColumns:
+  "repeat(auto-fit, minmax(320px, 1fr))",
             gap: "30px",
           }}
         >
@@ -177,8 +181,8 @@ export default function CompatibilizacaoBIMPage() {
                 background: "#111821",
                 border: "1px solid rgba(255,255,255,0.08)",
                 borderRadius: "24px",
-                padding: "42px",
-                minHeight: "320px",
+                padding: "36px",
+height: "100%",
               }}
             >
               <div
@@ -230,7 +234,7 @@ export default function CompatibilizacaoBIMPage() {
       >
         <h2
           style={{
-            fontSize: "56px",
+            fontSize: "clamp(30px, 5vw, 56px)",
             marginBottom: "50px",
           }}
         >
@@ -240,7 +244,8 @@ export default function CompatibilizacaoBIMPage() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
+            gridTemplateColumns:
+  "repeat(auto-fit, minmax(280px, 1fr))",
             gap: "24px",
           }}
         >
@@ -264,7 +269,11 @@ export default function CompatibilizacaoBIMPage() {
                 alignItems: "center",
               }}
             >
-              <CheckCircle2 size={22} color="#00A8E8" />
+              <CheckCircle2
+  size={20}
+  color="#00A8E8"
+  style={{ flexShrink: 0 }}
+/>
               <span style={{ fontSize: "18px" }}>{item}</span>
             </div>
           ))}
@@ -282,7 +291,7 @@ export default function CompatibilizacaoBIMPage() {
       >
         <h2
           style={{
-            fontSize: "56px",
+            fontSize: "clamp(30px, 5vw, 56px)",
             marginBottom: "40px",
           }}
         >
@@ -345,60 +354,67 @@ export default function CompatibilizacaoBIMPage() {
       <section
         style={{
           maxWidth: "1200px",
-          margin: "0 auto 120px",
-          padding: "80px",
-          textAlign: "center",
-          background:
-            "linear-gradient(135deg, rgba(17,24,33,1) 0%, rgba(22,42,73,1) 100%)",
-          borderRadius: "32px",
-          border: "1px solid rgba(255,255,255,0.08)",
+          margin: "120px auto",
+          padding: "0 40px 120px",
         }}
       >
-        <ShieldCheck
-          size={48}
-          color="#00A8E8"
-          style={{ marginBottom: "24px" }}
-        />
+        <div
+  style={{
+    background:
+      "linear-gradient(135deg,#0F1C2D 0%,#182B48 100%)",
+    border: "1px solid rgba(255,255,255,0.08)",
+    borderRadius: "32px",
+    padding: "clamp(40px, 6vw, 80px)",
+    textAlign: "center",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "clamp(32px, 5vw, 54px)",
+      lineHeight: "1.15",
+      marginBottom: "24px",
+      maxWidth: "900px",
+      margin: "0 auto 24px",
+    }}
+  >
+      Precisa de compatibilização BIM?
 
-        <h2
-          style={{
-            fontSize: "64px",
-            marginBottom: "24px",
-          }}
-        >
-          Precisa compatibilizar seus projetos?
-        </h2>
+  </h2>
 
-        <p
-          style={{
-            color: "#A8B3C7",
-            fontSize: "20px",
-            maxWidth: "700px",
-            margin: "0 auto 40px",
-            lineHeight: "1.8",
-          }}
-        >
-          Desenvolvemos modelos BIM coordenados para reduzir interferências,
-          aumentar a previsibilidade da obra e entregar documentação executiva
-          organizada.
-        </p>
+  <p
+    style={{
+      color: "#A8B3C7",
+      maxWidth: "800px",
+      margin: "0 auto 40px",
+      lineHeight: "1.9",
+      fontSize: "clamp(16px, 2vw, 18px)",
+    }}
+  >
+    Coordenamos arquitetura, estrutura e instalações em ambiente BIM para
+    identificar interferências antes da execução e proporcionar maior
+    previsibilidade para a obra.
+  </p>
 
-        <a
-          href="https://wa.me/55SEUNUMERO"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: "inline-block",
-            background: "#00A8E8",
-            color: "#FFFFFF",
-            padding: "18px 36px",
-            borderRadius: "14px",
-            textDecoration: "none",
-            fontWeight: 600,
-          }}
-        >
-          Solicitar orçamento
-        </a>
+  <a
+    href="https://wa.me/5519983577250"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "10px",
+      background: "#00A8E8",
+      color: "#FFF",
+      textDecoration: "none",
+      padding: "18px 34px",
+      borderRadius: "14px",
+      fontWeight: 600,
+    }}
+  >
+    Solicitar orçamento
+    <ArrowRight size={18} />
+  </a>
+</div>
       </section>
     </main>
   );

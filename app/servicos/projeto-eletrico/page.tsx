@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Header from "@/components/Header";
 import {
   Zap,
   Workflow,
@@ -44,118 +45,125 @@ export default function ProjetoEletricoPage() {
         fontFamily: "Arial, sans-serif",
       }}
     >
+      <Header active="servicos" />
       {/* HERO */}
 
-      <section
+<section
+  style={{
+    maxWidth: "1400px",
+    margin: "0 auto",
+    padding: "120px 40px 100px",
+  }}
+>
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns:
+        "repeat(auto-fit, minmax(350px, 1fr))",
+      gap: "60px",
+      alignItems: "center",
+    }}
+  >
+    <div>
+      <div
         style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "120px 40px",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "80px",
-          alignItems: "center",
+          color: "#00A8E8",
+          fontSize: "14px",
+          fontWeight: 700,
+          letterSpacing: "2px",
+          textTransform: "uppercase",
+          marginBottom: "24px",
         }}
       >
-        <div>
-          <div
-            style={{
-              color: "#00A8E8",
-              fontSize: "14px",
-              fontWeight: 700,
-              letterSpacing: "2px",
-              textTransform: "uppercase",
-              marginBottom: "24px",
-            }}
-          >
-            Projeto Elétrico
-          </div>
+        Projeto Elétrico
+      </div>
 
-          <h1
-            style={{
-              fontSize: "72px",
-              lineHeight: "1.05",
-              marginBottom: "32px",
-              fontWeight: 700,
-            }}
-          >
-            Projetos elétricos desenvolvidos para garantir segurança,
-            eficiência e previsibilidade
-          </h1>
+      <h1
+        style={{
+          fontSize: "clamp(36px, 8vw, 72px)",
+          lineHeight: "1.1",
+          marginBottom: "24px",
+        }}
+      >
+        Projetos elétricos desenvolvidos para garantir segurança,
+        eficiência e previsibilidade
+      </h1>
 
-          <p
-            style={{
-              color: "#A8B3C7",
-              fontSize: "22px",
-              lineHeight: "1.8",
-              maxWidth: "720px",
-              marginBottom: "40px",
-            }}
-          >
-            Desenvolvemos projetos elétricos em ambiente BIM para
-            residências, edifícios comerciais, empreendimentos hospitalares
-            e industriais, com foco em organização executiva, coordenação
-            entre disciplinas e confiabilidade das informações técnicas.
-          </p>
+      <p
+  style={{
+    color: "#A8B3C7",
+    fontSize: "clamp(16px, 2vw, 20px)",
+    lineHeight: "2",
+    maxWidth: "1000px",
+    marginBottom: "24px",
+  }}
+>
+        Desenvolvemos projetos elétricos em ambiente BIM para
+        residências, edifícios comerciais, empreendimentos
+        hospitalares e industriais, com foco em organização
+        executiva, coordenação entre disciplinas e confiabilidade
+        das informações técnicas.
+      </p>
 
-          <div
-            style={{
-              display: "flex",
-              gap: "16px",
-              flexWrap: "wrap",
-            }}
-          >
-            <a
-              href="https://wa.me/5514998872510"
-              target="_blank"
-              style={{
-                background: "#00A8E8",
-                color: "#FFF",
-                textDecoration: "none",
-                padding: "18px 34px",
-                borderRadius: "14px",
-                fontWeight: 600,
-              }}
-            >
-              Solicitar orçamento
-            </a>
-
-            <Link
-              href="/cases"
-              style={{
-                border: "1px solid rgba(255,255,255,0.15)",
-                color: "#FFF",
-                textDecoration: "none",
-                padding: "18px 34px",
-                borderRadius: "14px",
-                fontWeight: 600,
-              }}
-            >
-              Ver projetos
-            </Link>
-          </div>
-        </div>
-
-        <div
+      <div
+        style={{
+          display: "flex",
+          gap: "16px",
+          flexWrap: "wrap",
+        }}
+      >
+        <a
+          href="https://wa.me/5519983577250"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
-            background: "#111821",
-            border: "1px solid rgba(255,255,255,0.08)",
-            borderRadius: "24px",
-            overflow: "hidden",
+            background: "#00A8E8",
+            color: "#FFF",
+            textDecoration: "none",
+            padding: "18px 34px",
+            borderRadius: "14px",
+            fontWeight: 600,
           }}
         >
-          <img
-            src="/residencialelt.png"
-            alt="Projeto Elétrico"
-            style={{
-              width: "100%",
-              height: "520px",
-              objectFit: "cover",
-              display: "block",
-            }}
-          />
-        </div>
-      </section>
+          Solicitar orçamento
+        </a>
+
+        <Link
+          href="/cases"
+          style={{
+            border: "1px solid rgba(255,255,255,0.15)",
+            color: "#FFF",
+            textDecoration: "none",
+            padding: "18px 34px",
+            borderRadius: "14px",
+            fontWeight: 600,
+          }}
+        >
+          Ver projetos
+        </Link>
+      </div>
+    </div>
+
+    <div
+      style={{
+        background: "#111821",
+        border: "1px solid rgba(255,255,255,0.08)",
+        borderRadius: "24px",
+        overflow: "hidden",
+      }}
+    >
+      <img
+        src="/residencialelt.png"
+        alt="Projeto Elétrico"
+        style={{
+          width: "100%",
+          height: "auto",
+          display: "block",
+        }}
+      />
+    </div>
+  </div>
+</section>
 
       {/* BENEFÍCIOS RÁPIDOS */}
 
@@ -166,21 +174,22 @@ export default function ProjetoEletricoPage() {
         }}
       >
         <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "32px 40px",
-            display: "grid",
-            gridTemplateColumns: "repeat(4,1fr)",
-            gap: "20px",
-            textAlign: "center",
-          }}
-        >
-          <div>✓ Quadros elétricos</div>
-          <div>✓ Circuitos e proteção</div>
-          <div>✓ Compatibilização BIM</div>
-          <div>✓ Documentação executiva</div>
-        </div>
+  style={{
+    maxWidth: "1200px",
+    margin: "0 auto",
+    padding: "32px 24px",
+    display: "grid",
+    gridTemplateColumns:
+      "repeat(auto-fit, minmax(180px, 1fr))",
+    gap: "20px",
+    textAlign: "center",
+  }}
+>
+  <div>✓ Quadros elétricos</div>
+  <div>✓ Circuitos e proteção</div>
+  <div>✓ Compatibilização BIM</div>
+  <div>✓ Documentação executiva</div>
+</div>
       </section>
 
       {/* DESAFIO */}
@@ -193,13 +202,15 @@ export default function ProjetoEletricoPage() {
         }}
       >
         <h2
-          style={{
-            fontSize: "56px",
-            marginBottom: "32px",
-          }}
-        >
-          A importância do planejamento elétrico
-        </h2>
+  style={{
+    fontSize: "clamp(30px, 5vw, 56px)",
+    lineHeight: "1.15",
+    marginBottom: "32px",
+    maxWidth: "900px",
+  }}
+>
+  A importância do planejamento elétrico
+</h2>
 
         <p
           style={{
@@ -229,124 +240,143 @@ export default function ProjetoEletricoPage() {
         </p>
       </section>
 
-      {/* COMO FUNCIONA */}
+     {/* COMO FUNCIONA */}
 
-      <section
+<section
+  style={{
+    maxWidth: "1200px",
+    margin: "120px auto",
+    padding: "0 24px",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "clamp(30px, 5vw, 56px)",
+      lineHeight: "1.2",
+      marginBottom: "40px",
+    }}
+  >
+    Como desenvolvemos nossos projetos elétricos
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns:
+        "repeat(auto-fit, minmax(320px, 1fr))",
+      gap: "24px",
+    }}
+  >
+    {etapas.map((item, index) => (
+      <div
+        key={index}
         style={{
-          maxWidth: "1200px",
-          margin: "120px auto",
-          padding: "0 40px",
+          background: "#111821",
+          border: "1px solid rgba(255,255,255,0.08)",
+          borderRadius: "24px",
+          padding: "36px",
+          height: "100%",
         }}
       >
-        <h2
-          style={{
-            fontSize: "56px",
-            marginBottom: "60px",
-          }}
-        >
-          Como desenvolvemos os projetos
-        </h2>
-
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3,1fr)",
-            gap: "24px",
+            width: "70px",
+            height: "70px",
+            background: "rgba(0,168,232,0.12)",
+            borderRadius: "16px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#00A8E8",
+            marginBottom: "24px",
           }}
         >
-          {etapas.map((item, index) => (
-            <div
-              key={index}
-              style={{
-                background: "#111821",
-                border: "1px solid rgba(255,255,255,0.08)",
-                borderRadius: "24px",
-                padding: "36px",
-              }}
-            >
-              <div
-                style={{
-                  width: "70px",
-                  height: "70px",
-                  background: "rgba(0,168,232,0.12)",
-                  borderRadius: "16px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "#00A8E8",
-                  marginBottom: "24px",
-                }}
-              >
-                {item.icon}
-              </div>
-
-              <h3
-                style={{
-                  fontSize: "30px",
-                  marginBottom: "20px",
-                }}
-              >
-                {item.title}
-              </h3>
-
-              <p
-                style={{
-                  color: "#A8B3C7",
-                  lineHeight: "1.9",
-                  fontSize: "17px",
-                }}
-              >
-                {item.text}
-              </p>
-            </div>
-          ))}
+          {item.icon}
         </div>
-      </section>
+
+        <h3
+          style={{
+            fontSize: "clamp(24px, 4vw, 30px)",
+            lineHeight: "1.2",
+            marginBottom: "20px",
+          }}
+        >
+          {item.title}
+        </h3>
+
+        <p
+          style={{
+            color: "#A8B3C7",
+            lineHeight: "1.9",
+            fontSize: "clamp(16px, 2vw, 17px)",
+          }}
+        >
+          {item.text}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* BENEFÍCIOS */}
 
-      <section
+<section
+  style={{
+    maxWidth: "1200px",
+    margin: "120px auto",
+    padding: "0 24px",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "clamp(30px, 5vw, 56px)",
+      lineHeight: "1.2",
+      marginBottom: "32px",
+    }}
+  >
+    Benefícios para a obra
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns:
+        "repeat(auto-fit, minmax(280px, 1fr))",
+      gap: "20px",
+    }}
+  >
+    {beneficios.map((item) => (
+      <div
+        key={item}
         style={{
-          maxWidth: "1200px",
-          margin: "120px auto",
-          padding: "0 40px",
+          background: "#111821",
+          border: "1px solid rgba(255,255,255,0.08)",
+          borderRadius: "18px",
+          padding: "24px",
+          display: "flex",
+          alignItems: "center",
+          gap: "12px",
+          minHeight: "90px",
         }}
       >
-        <h2
-          style={{
-            fontSize: "56px",
-            marginBottom: "50px",
-          }}
-        >
-          Benefícios para a obra
-        </h2>
+        <CheckCircle2
+          size={20}
+          color="#00A8E8"
+          style={{ flexShrink: 0 }}
+        />
 
-        <div
+        <span
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3,1fr)",
-            gap: "20px",
+            fontSize: "clamp(16px, 2vw, 18px)",
+            lineHeight: "1.6",
           }}
         >
-          {beneficios.map((item) => (
-            <div
-              key={item}
-              style={{
-                background: "#111821",
-                border: "1px solid rgba(255,255,255,0.08)",
-                borderRadius: "18px",
-                padding: "24px",
-                display: "flex",
-                alignItems: "center",
-                gap: "12px",
-              }}
-            >
-              <CheckCircle2 size={20} color="#00A8E8" />
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
+          {item}
+        </span>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* CASES RELACIONADOS */}
 
@@ -358,11 +388,12 @@ export default function ProjetoEletricoPage() {
         }}
       >
         <h2
-          style={{
-            fontSize: "56px",
-            marginBottom: "40px",
-          }}
-        >
+  style={{
+    fontSize: "clamp(30px, 5vw, 56px)",
+    lineHeight: "1.2",
+    marginBottom: "32px",
+  }}
+>
           Cases relacionados
         </h2>
 
@@ -419,66 +450,72 @@ export default function ProjetoEletricoPage() {
 
       {/* CTA */}
 
-      <section
-        style={{
-          maxWidth: "1200px",
-          margin: "120px auto",
-          padding: "0 40px 120px",
-        }}
-      >
-        <div
-          style={{
-            background:
-              "linear-gradient(135deg,#0F1C2D 0%,#182B48 100%)",
-            border: "1px solid rgba(255,255,255,0.08)",
-            borderRadius: "32px",
-            padding: "80px",
-            textAlign: "center",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "54px",
-              marginBottom: "24px",
-            }}
-          >
-            Precisa de um projeto elétrico?
-          </h2>
+<section
+  style={{
+    maxWidth: "1200px",
+    margin: "120px auto",
+    padding: "0 24px 120px",
+  }}
+>
+  <div
+    style={{
+      background:
+        "linear-gradient(135deg,#0F1C2D 0%,#182B48 100%)",
+      border: "1px solid rgba(255,255,255,0.08)",
+      borderRadius: "32px",
+      padding: "clamp(40px, 6vw, 80px)",
+      textAlign: "center",
+    }}
+  >
+    <h2
+      style={{
+        fontSize: "clamp(32px, 5vw, 54px)",
+        lineHeight: "1.15",
+        marginBottom: "24px",
+        maxWidth: "900px",
+        margin: "0 auto 24px",
+      }}
+    >
+      Precisa de um projeto elétrico?
+    </h2>
 
-          <p
-            style={{
-              color: "#A8B3C7",
-              maxWidth: "800px",
-              margin: "0 auto 40px",
-              lineHeight: "1.9",
-              fontSize: "18px",
-            }}
-          >
-            Desenvolvemos projetos elétricos completos em ambiente BIM para
-            garantir segurança, organização executiva e integração entre
-            disciplinas desde a fase de projeto.
-          </p>
+    <p
+      style={{
+        color: "#A8B3C7",
+        maxWidth: "800px",
+        margin: "0 auto 40px",
+        lineHeight: "1.9",
+        fontSize: "clamp(16px, 2vw, 18px)",
+      }}
+    >
+      Desenvolvemos projetos elétricos completos em ambiente BIM para
+      garantir segurança, organização executiva e integração entre
+      disciplinas desde a fase de projeto.
+    </p>
 
-          <a
-            href="https://wa.me/5514998872510"
-            target="_blank"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "10px",
-              background: "#00A8E8",
-              color: "#FFF",
-              textDecoration: "none",
-              padding: "18px 34px",
-              borderRadius: "14px",
-              fontWeight: 600,
-            }}
-          >
-            Solicitar orçamento
-            <ArrowRight size={18} />
-          </a>
-        </div>
-      </section>
+    <a
+      href="https://wa.me/5519983577250"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "10px",
+        background: "#00A8E8",
+        color: "#FFF",
+        textDecoration: "none",
+        padding: "18px 34px",
+        borderRadius: "14px",
+        fontWeight: 600,
+        fontSize: "16px",
+      }}
+    >
+      Solicitar orçamento
+      <ArrowRight size={18} />
+    </a>
+  </div>
+</section>
     </main>
   );
 }

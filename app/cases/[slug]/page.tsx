@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { cases } from "../../../data/cases";
+import Header from "@/components/Header";
 
 type Props = {
   params: Promise<{
@@ -48,43 +49,8 @@ export default async function CasePage({
         fontFamily: "Arial, sans-serif",
       }}
     >
-      {/* BREADCRUMB */}
-
-<div
-  style={{
-    maxWidth: "1200px",
-    margin: "0 auto",
-    padding: "40px 40px 0",
-    color: "#7A8699",
-    fontSize: "14px",
-  }}
->
-  <Link
-    href="/"
-    style={{
-      color: "#7A8699",
-      textDecoration: "none",
-    }}
-  >
-    Home
-  </Link>
-
-  {" / "}
-
-  <Link
-    href="/cases"
-    style={{
-      color: "#7A8699",
-      textDecoration: "none",
-    }}
-  >
-    Portfólio
-  </Link>
-
-  {" / "}
-
-  {project.title}
-</div>
+      <Header active="cases" />
+      
       {/* HERO */}
 
 <section
@@ -97,7 +63,8 @@ export default async function CasePage({
   <div
     style={{
       display: "grid",
-      gridTemplateColumns: "1.1fr 1fr",
+      gridTemplateColumns:
+  "repeat(auto-fit, minmax(320px, 1fr))",
       gap: "60px",
       alignItems: "center",
     }}
@@ -119,8 +86,8 @@ export default async function CasePage({
 
       <h1
         style={{
-          fontSize: "64px",
-          lineHeight: "1.05",
+          fontSize: "clamp(36px, 6vw, 64px)",
+lineHeight: "1.1",
           marginBottom: "24px",
         }}
       >
@@ -130,7 +97,7 @@ export default async function CasePage({
       <p
         style={{
           color: "#A8B3C7",
-          fontSize: "20px",
+          fontSize: "clamp(16px, 2vw, 20px)",
           lineHeight: "1.8",
           marginBottom: "32px",
         }}
@@ -169,7 +136,8 @@ export default async function CasePage({
   alt={project.title}
   style={{
     width: "100%",
-    height: "500px",
+    height: "auto",
+maxHeight: "500px",
     objectFit: "cover",
     display: "block",
   }}
@@ -193,7 +161,8 @@ export default async function CasePage({
       borderRadius: "24px",
       padding: "40px",
       display: "grid",
-      gridTemplateColumns: "repeat(4,1fr)",
+      gridTemplateColumns:
+  "repeat(auto-fit, minmax(220px, 1fr))",
       gap: "30px",
       textAlign: "center",
     }}
@@ -212,7 +181,7 @@ export default async function CasePage({
 
       <div
         style={{
-          fontSize: "32px",
+          fontSize: "clamp(24px, 4vw, 32px)",
           fontWeight: "700",
         }}
       >
@@ -278,7 +247,7 @@ export default async function CasePage({
 
       <div
         style={{
-          fontSize: "24px",
+          fontSize: "clamp(24px, 4vw, 32px)",
           fontWeight: "600",
         }}
       >
@@ -312,7 +281,7 @@ export default async function CasePage({
 >
   <h2
     style={{
-      fontSize: "52px",
+      fontSize: "clamp(24px, 4vw, 32px)",
       marginBottom: "40px",
     }}
   >
@@ -322,7 +291,8 @@ export default async function CasePage({
   <div
     style={{
       display: "grid",
-      gridTemplateColumns: "2fr 1fr",
+      gridTemplateColumns:
+  "repeat(auto-fit, minmax(280px, 1fr))",
       gap: "20px",
     }}
   >
@@ -420,57 +390,111 @@ export default async function CasePage({
 
       {/* CTA */}
 
-      <section
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "0 40px 120px",
-        }}
-      >
-        <div
-          style={{
-            background:
-              "linear-gradient(135deg,#111821,#17263A)",
-            border:
-              "1px solid rgba(255,255,255,0.08)",
-            borderRadius: "32px",
-            padding: "60px",
-            textAlign: "center",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "42px",
-              marginBottom: "20px",
-            }}
-          >
-            Precisa de projetos elétricos, hidrossanitários ou compatibilização BIM?
-          </h2>
+<section
+  style={{
+    maxWidth: "1400px",
+    margin: "0 auto",
+    padding:
+      typeof window !== "undefined" &&
+      window.innerWidth < 768
+        ? "0 24px 80px"
+        : "0 40px 120px",
+  }}
+>
+  <div
+    style={{
+      background:
+        "linear-gradient(135deg,#0D1726 0%, #17263D 100%)",
+      border: "1px solid rgba(255,255,255,0.08)",
+      borderRadius:
+        typeof window !== "undefined" &&
+        window.innerWidth < 768
+          ? "24px"
+          : "32px",
 
-          <p
-            style={{
-              color: "#A8B3C7",
-              marginBottom: "32px",
-            }}
-          >
-            Entre em contato e solicite um orçamento.
-          </p>
+      padding:
+        typeof window !== "undefined" &&
+        window.innerWidth < 768
+          ? "50px 24px"
+          : "80px 60px",
 
-          <button
-            style={{
-              background: "#00A8E8",
-              color: "#fff",
-              border: "none",
-              borderRadius: "12px",
-              padding: "16px 28px",
-              cursor: "pointer",
-              fontSize: "16px",
-            }}
-          >
-            Solicitar orçamento
-          </button>
-        </div>
-      </section>
+      textAlign: "center",
+    }}
+  >
+    <h2
+  style={{
+    fontSize: "clamp(32px, 6vw, 64px)",
+
+    lineHeight: "1.1",
+    marginBottom: "24px",
+  }}
+>
+  {typeof window !== "undefined" && window.innerWidth < 768 ? (
+    <>
+      Precisa de projetos
+      <br />
+      complementares?
+    </>
+  ) : (
+    "Precisa de projetos complementares?"
+  )}
+</h2>
+
+    <p
+      style={{
+        color: "#A8B3C7",
+
+        maxWidth:
+          typeof window !== "undefined" &&
+          window.innerWidth < 768
+            ? "100%"
+            : "800px",
+
+        margin: "0 auto 40px",
+
+        lineHeight: "1.8",
+
+        fontSize:
+          typeof window !== "undefined" &&
+          window.innerWidth < 768
+            ? "16px"
+            : "18px",
+      }}
+    >
+      Entre em contato para avaliar seu empreendimento e receber
+      uma proposta técnica adequada às necessidades do projeto.
+    </p>
+
+    <a
+      href="https://wa.me/5519983577250"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: "inline-block",
+        background: "#00A8E8",
+        color: "#FFFFFF",
+
+        padding:
+          typeof window !== "undefined" &&
+          window.innerWidth < 768
+            ? "16px 28px"
+            : "18px 36px",
+
+        borderRadius: "14px",
+        textDecoration: "none",
+        fontWeight: 600,
+
+        fontSize:
+          typeof window !== "undefined" &&
+          window.innerWidth < 768
+            ? "16px"
+            : "18px",
+      }}
+    >
+      Solicitar orçamento
+    </a>
+  </div>
+</section>
     </main>
   );
 }

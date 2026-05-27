@@ -89,7 +89,7 @@ export default function CasesPage() {
         </p>
 
         <a
-          href="https://wa.me/5514991002672"
+          href="https://wa.me/5519983577250"
           target="_blank"
           style={{
             display: "inline-block",

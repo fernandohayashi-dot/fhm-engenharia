@@ -1,15 +1,21 @@
 export interface CaseData {
   slug: string;
   title: string;
+
+  client: string;
+  year: string;
+
   location: string;
   category: string;
   area: string;
   phase: string;
   software: string;
+
   headline: string;
   challenge: string;
   solution: string;
   result: string;
+
   activities: string[];
   gallery: string[];
 
@@ -21,6 +27,10 @@ export const cases: CaseData[] = [
     slug: "santa-casa-marilia",
 
     title: "Santa Casa de Misericórdia de Marília",
+
+    client: "Santa Casa de Misericórdia de Marília",
+    
+    year: "2025",
 
     coverImage: "/projeto2.png",
 
@@ -63,6 +73,9 @@ export const cases: CaseData[] = [
   slug: "residencia-alto-padrao",
 
   title: "Residência Alto Padrão",
+
+  client: "Residência Alto Padrão",
+  year: "2026",
 
   location: "Indaiatuba/SP",
 
@@ -108,7 +121,10 @@ export const cases: CaseData[] = [
 
   title: "Galpão Comercial",
 
-  location: "Ribeirão Preto/SP",
+  client: "Galpão Comercial",
+  year: "2024",
+
+  location: "Cerqueira César/SP",
 
   coverImage: "/projeto3.png",
 

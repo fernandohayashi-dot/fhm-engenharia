@@ -1301,7 +1301,7 @@ export default function Home() {
       </a>
 
       <a
-        href="mailto:contato@fhmengenharia.com.br"
+        href="mailto:fernandohayashi@gmail.com"
         style={{
           border: "1px solid rgba(255,255,255,0.15)",
           color: "#F5F6F7",
@@ -1323,7 +1323,7 @@ export default function Home() {
         lineHeight: "1.8",
       }}
     >
-      contato@fhmengenharia.com.br
+      fernandohayashi@gmail.com
       <br />
       Atendimento remoto para todo o Brasil
     </div>
@@ -1408,13 +1408,13 @@ export default function Home() {
       </a>
 
       <a
-        href="mailto:contato@fhmengenharia.com.br"
+        href="mailto:fernandohayashi@gmail.com"
         style={{
           color: "#F5F6F7",
           textDecoration: "none",
         }}
       >
-        contato@fhmengenharia.com.br
+        fernandohayashi@gmail.com
       </a>
     </div>
   </div>
